@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(https://st3.depositphotos.com/3393171/33130/v/600/depositphotos_331304510-stock-illustration-seamless-pattern-with-funny-clouds.jpg);
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.border-text {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.pixel-title {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-family: 'Press Start 2P', cursive;
+    color: whitesmoke;
+    
+}
+
+.color {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+
+}
+
+#title {
+    font-size:medium;
+    margin-bottom: 10px;
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+}
+
+.camp {
+    padding: 15px;
+    background-color: azure;
+    border-radius: 16px;
+    text-align: center;
+    /* box-shadow: inset 0.3em 0.3em black; */
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid black;
+}
+
+#box-blue {
+    background-color: blue;
+}
+
+#box-red {
+    background-color: red;
+}
+
+#box-green {
+    background-color: green;
+}
+
+#box-yellow {
+    background-color: yellow;
+}
+
+#box-black {
+    background-color: black;
+}
+
+#board-pixel {
+    border: 1px solid black;
+    position: relative;
+}
+
+.pixel {
+    background-color: white;
+    margin: 1px;
+    height: 25px;
+    width: 25px;
+    border: 1px black solid;
+    display: inline-block;
+}
+
+#clear-board {
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#pixel-board {
+    position: relative;
+    margin-top: 30px;
+}
+
+.line {
+    margin: -8px;
+    box-sizing: border-box;
+}
+
