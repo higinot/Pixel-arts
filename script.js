@@ -6,11 +6,11 @@ wrapper.appendChild(pixelBoard);
 
 /* Função que ira criar o quadros */
 function pixel() {
-  for (let index = 0; index < 30; index += 1) {
+  for (let index = 0; index < 12; index += 1) {
     const line = document.createElement("div"); // Criei 5 linhas no HTML
     line.className = "line";
     pixelBoard.appendChild(line);
-    for (let i = 0; i < 50; i += 1) {
+    for (let i = 0; i < 12; i += 1) {
       const pixel = document.createElement("div");
       pixel.className = "pixel";
       line.appendChild(pixel);
@@ -77,11 +77,6 @@ function paintBackground({ target }) {
 board.addEventListener('click', paintBackground)
 
 const random = document.querySelector(".random");
-
-console.log(random)
-
-const allPixel = document.querySelectorAll(".pixel")
-
 
 function randomColor() {
   return '#' + parseInt((Math.random() * 0xFFFFFF))

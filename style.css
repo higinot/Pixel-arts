@@ -86,8 +86,8 @@ body{
 .pixel {
     background-color: white;
     margin: 1px;
-    height: 15px;
-    width: 15px;
+    height: 50px;
+    width: 50px;
     border: 1px black solid;
     display: inline-block;
 }
@@ -104,6 +104,6 @@ body{
 }
 
 .line {
-    margin: -8px -2px -8px -2px;
+    margin: -6px -2px -6px -2px;
     box-sizing: initial;
 }
