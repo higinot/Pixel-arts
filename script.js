@@ -6,11 +6,11 @@ wrapper.appendChild(pixelBoard);
 
 /* Função que ira criar o quadros */
 function pixel() {
-  for (let index = 0; index < 15; index += 1) {
+  for (let index = 0; index < 30; index += 1) {
     const line = document.createElement("div"); // Criei 5 linhas no HTML
     line.className = "line";
     pixelBoard.appendChild(line);
-    for (let i = 0; i < 20; i += 1) {
+    for (let i = 0; i < 50; i += 1) {
       const pixel = document.createElement("div");
       pixel.className = "pixel";
       line.appendChild(pixel);
@@ -62,8 +62,8 @@ function clearBoard() {
 clearBoard();
 
 function paintBackground({ target }) {
-  console.log(target.style.backgroundColor);
-  if (target.style.backgroundColor !== "") {
+  console.log(target.className);
+  if (target.style.backgroundColor !== "" && target.className === 'pixel' ) {
     target.style.backgroundColor = "";
   } else {
     const color = document.querySelector(".selected");
@@ -75,3 +75,30 @@ function paintBackground({ target }) {
 }
 
 board.addEventListener('click', paintBackground)
+
+const random = document.querySelector(".random");
+
+console.log(random)
+
+const allPixel = document.querySelectorAll(".pixel")
+
+
+function randomColor() {
+  return '#' + parseInt((Math.random() * 0xFFFFFF))
+    .toString(16)
+    .padStart(6, '0');
+}
+
+function randomPixel() {
+  const allPixel = document.querySelectorAll(".pixel")
+
+  allPixel.forEach((pixel) => {
+
+    pixel.style.backgroundColor = randomColor();
+  })
+}
+
+random.addEventListener('click', () => {
+  console.log("ok")
+  return randomPixel()
+})
